@@ -61,3 +61,5 @@ networksets                                    crd.projectcalico.org/v1         
 endpointslices                                 discovery.k8s.io/v1                    true         EndpointSlice
 events                            ev           events.k8s.io/v1                       true         Event
 flowschemas                                    flowcontrol.apiserver.k8s.io/v1beta3   false        FlowSchema
+
+#kubectl get events {This will show all the evebts or what's goinng  in the cluster.}
