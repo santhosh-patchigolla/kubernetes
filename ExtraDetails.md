@@ -63,3 +63,12 @@ events                            ev           events.k8s.io/v1                 
 flowschemas                                    flowcontrol.apiserver.k8s.io/v1beta3   false        FlowSchema
 
 #kubectl get events {This will show all the evebts or what's goinng  in the cluster.}
+
+# for minikube creation
+root >kubernetes>minikube
+make setup   >  give route 53 >check in subscription is that thare are not...  wait for 15 mins >
+check >   cd ~/.kube   > cat config (check content is there are not)
+kubectl get pods
+
+
+make destroy  
