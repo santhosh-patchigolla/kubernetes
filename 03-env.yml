@@ -10,3 +10,6 @@ spec:
       env:
         - name: APP
           value: ecomm 
+
+
+# this is how we pass the ENV variables in the kubernetes          
