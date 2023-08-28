@@ -1,4 +1,4 @@
-# apiVersion: v1
+# apiVersion: v1  (you can use this one also)
 # kind: Pod
 # metadata:
 #   name: pod-with-multiple-containers
