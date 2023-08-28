@@ -26,3 +26,46 @@ spec:
         - /tmp/healthy
       initialDelaySeconds: 5
       periodSeconds: 5
+
+
+--- 
+### below Pod with Readiness and liveliness
+apiVersion: v1
+kind: Pod
+metadata:
+  name: goproxy
+  labels:
+    app: goproxy
+spec:
+  containers:
+  - name: goproxy
+    image: registry.k8s.io/goproxy:0.1
+    ports:
+    - containerPort: 8080
+    readinessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    livenessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 15
+      periodSeconds: 20     
+
+
+# Liveness Probe:
+# A liveness probe is used to check if a container is alive and healthy. It is used to ensure that the application inside the container is running as expected. If the liveness probe fails, Kubernetes will restart the container to try to recover the application.
+# Use cases for liveness probes:
+
+# Detecting and recovering from application crashes.
+# Detecting deadlocks or hung application states.
+# Preventing a container from staying in a broken state  
+
+# Readiness Probe:
+# A readiness probe is used to check if a container is ready to serve traffic. It is used to determine when a container should start receiving traffic. If the readiness probe fails, the container will be removed from load balancing until it becomes ready again.
+# Use cases for readiness probes:
+
+# Allowing a container to warm up before receiving traffic.
+# Ensuring that a container has established connections to external services before serving traffic.
+# Preventing traffic from being directed to a container that's still starting up.
