@@ -11,18 +11,19 @@
 # Ensure pod 100% should be less than 80% of the node size.
 # If pod is not able to find the node as per it's limits and requests, POD will stay in the pending state.
 
+
 apiVersion: v1
 kind: Pod
 metadata:
-  name: frontend
+  name: resource-limit-pod
 spec:
   containers:
-  - name: app
-    image: nginx:latest
-    resources:
-      requests:
-        memory: "64Mi"
-        cpu: "250m"
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
+    - name: my-container
+      image: nginx:latest
+      resources:
+        limits:
+          cpu: "1"
+          memory: "512Mi"
+        requests:
+          cpu: "0.5"
+          memory: "256Mi"
