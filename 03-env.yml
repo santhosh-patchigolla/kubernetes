@@ -7,5 +7,6 @@ spec:
     - name: centos
       image: centos:7
       command: ["sleep" , "3600"]
-    - name: APP
-      value: ecomm 
+      env
+        - name: APP
+          value: ecomm 
