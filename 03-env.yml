@@ -10,6 +10,10 @@ spec:
       env:
         - name: APP
           value: ecomm 
+        - name: BATCH
+          value: "54"  
+        - name : ENV
+          value: "DEV"  
 
 
 # this is how we pass the ENV variables in the kubernetes          
