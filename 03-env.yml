@@ -7,3 +7,7 @@ spec:
     - name: centos
       image: centos:7
       command: ["sleep" , "3600"]
+    - name: ENV
+      value: dev
+    - name: MONDGO
+      value: app      
