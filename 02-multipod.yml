@@ -1,4 +1,4 @@
-# apiVersion: v1  (you can use this one also)
+# apiVersion: v1  (you can use this one also) first one is creating two containers in same pod ex: 2/2
 # kind: Pod
 # metadata:
 #   name: pod-with-multiple-containers
@@ -10,7 +10,7 @@
 #     image: debian
 
 
-apiVersion: v1
+apiVersion: v1 # this one is creating two containers individuall  ex: 1/1 ,1/1
 kind: Pod
 metadata:
   name: pod1
