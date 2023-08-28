@@ -9,7 +9,6 @@ kind: ConfigMap
 metadata:
   name: ecomm-configmap
 data:
-  #MONGODB_URL: "mongodb.roboshop.internal"
   ENV: dev
   BATCH: "54" 
   APP: ecomm 
